@@ -1,0 +1,10 @@
+.arc_wrapper {
+  display: flex;
+
+  div {
+    min-width: 40px;
+    min-height: 40px;
+    border: 2px solid rgb(55, 55, 55);
+    display: inline-block
+  }
+}
