@@ -1,4 +1,4 @@
 <div class="card card-small">
-  <app-arc-item [assignment]="result"></app-arc-item>
+  <app-arc-item [subtest]="result" (emitResults)="updateResults($event)"></app-arc-item>
 </div>
 

@@ -1,20 +1,21 @@
 <div class="card card-small" (click)="changeState()" [@widthGrow]="state">
     <div *ngIf="state === 'closed'; else arc">
-     <span> Open TEST - {{assignment.id}}</span>
+      <button mat-button color="primary">Open TEST - {{assignment.id}}</button>
     </div>
 
     <ng-template #arc>
       <div class="ass-wrapper">
-        <app-arc-item [assignment]="assignment"></app-arc-item>
+        <app-arc-item [subtest]="this.example.assignment"></app-arc-item>
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2"/>
           <path d="M0 0h24v24H0z" fill="none"/>
         </svg>
-        <app-arc-item [assignment]="assignment"></app-arc-item>
+        <app-arc-item [subtest]="this.example.result"></app-arc-item>
       </div>
 
+
       <div class="res-wrapper">
-        <app-arc-item [assignment]="assignment"></app-arc-item>
+        <app-arc-item [subtest]="assignment.boxes"></app-arc-item>
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2"/>
           <path d="M0 0h24v24H0z" fill="none"/>

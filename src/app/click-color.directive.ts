@@ -1,9 +1,15 @@
-import { Directive, HostBinding, HostListener, Input } from '@angular/core';
+import { Directive, EventEmitter, HostBinding, HostListener, Input, Output } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { SharedService } from './shared.service';
 
-const colors = ['black',  'blue',  'red'];
-const numColors = colors.length-1;
+export enum ColorEnum {
+  Peignoir = '#efe7d6',
+  Alfresco = '#688290',
+  Farrow = '#6d6d6d',
+
+}
+const colors = ['#efe7d6',  '#688290',  '#6d6d6d'];
+const numColors = colors.length - 1;
 
 @Directive({
   selector: '[appClickColor]'
@@ -11,6 +17,7 @@ const numColors = colors.length-1;
 export class ClickColorDirective {
   @Input() color: string = this.getRandomColor();
   @Input() isResult: boolean = false;
+  @Output() updateValue: EventEmitter<any> = new EventEmitter();
 
   constructor(private doms: DomSanitizer) { }
 
@@ -21,7 +28,8 @@ export class ClickColorDirective {
   @HostListener('click') onClick() {
     // TODO change for DEV purposes
     if(this.isResult){
-      this.color = colors[colors.indexOf(this.color) + 1]
+      this.color = colors[colors.indexOf(this.color) + 1];
+      this.updateValue.emit(this.color);
     }
   }
 

@@ -1,8 +1,7 @@
-import { AssignmentModel } from './assignment.model';
+import { SubtestModel } from './subtestModel';
 import { ResultModel } from './result.model';
 
 export interface TestModel {
-  test_id: number;
-  assignments: AssignmentModel[];
-  results: AssignmentModel[];// TODO ?ResultModel[];
+  test_id: number; // test_id
+  assignments: SubtestModel[];
 }
