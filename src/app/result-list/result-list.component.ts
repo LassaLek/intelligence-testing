@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { AssignmentModel } from '../assignment.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SubtestModel } from '../subtestModel';
 
 @Component({
   selector: 'app-result-list',
@@ -8,11 +8,22 @@ import { AssignmentModel } from '../assignment.model';
 })
 export class ResultListComponent implements OnInit {
 
-  @Input() results: AssignmentModel[]
+  @Input() subtests: SubtestModel[]
+  subtestResults = new Array(9).fill(false);
 
+  @Output() testResults = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
-    console.log('ResultListComponent results:', this.results);
+    console.log('ResultListComponent results:', this.subtests);
   }
+
+  updateSubtestResults(result: boolean, index: number) {
+    console.log('ResultListComponent result:', result);
+    console.log('ResultListComponent index:', index);
+    this.subtestResults[index] = result;
+    console.log('ResultListComponent this.subtestResults:', this.subtestResults);
+    this.testResults.emit(this.subtestResults);
+  }
+
 }

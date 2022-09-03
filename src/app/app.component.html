@@ -57,7 +57,7 @@
     opacity: 0.8;
   }
 
-  .content {
+/*  .content {
     display: flex;
     margin: 32px auto;
     padding: 0 16px;
@@ -65,7 +65,7 @@
     align-items: center;
     flex: 1 0 auto;
 
-  }
+  }*/
 
   .card svg.material-icons path {
     fill: #888;
@@ -196,22 +196,40 @@
 </div>
 
 <div class="content" role="main">
-  <div id="wrapper">
-    <!-- Assignments -->
-    <div id="assignments">
-      <app-assignment-list [assignments]="test.assignments"></app-assignment-list>
-    </div>
-    <!-- Results -->
-    <div id="results">
-      <app-result-list [results]="test.results"></app-result-list>
-    </div>
-  </div>
+  <div *ngIf="currentTest ;else init_test">
+    <!--TODO show when test started - run counter-->
+    <div id="wrapper">
+      <!-- Assignments -->
+      <div id="assignments">
+        <app-assignment-list [assignments]="currentTest.assignments"></app-assignment-list>
+      </div>
+      <!-- Results -->
+      <div id="results">
+        <app-result-list [subtests]="currentTest.assignments" (testResults)="updateTestResults($event)"></app-result-list>
+
+      </div>
 
 
-  <!-- Terminal -->
-  <div class="terminal">
-    <pre>Result: X</pre>
+    </div>
+
+    <button mat-button (click)="processTheTest()">Submit</button>
+    <!-- Terminal -->
+    <div class="terminal">
+      <pre>Result: {{score}}</pre>
+    </div>
+
+    <mat-progress-bar mode="determinate" value="{{timerProgress}}"></mat-progress-bar>
+    {{timer}}
   </div>
+
+  <ng-template #init_test>
+
+    other content here...
+    TODO - some embeded video
+    TODO - some description end explanation
+
+    <button mat-button (click)="startTheTest()">Start</button>
+  </ng-template>
 
 
   <!-- Footer -->

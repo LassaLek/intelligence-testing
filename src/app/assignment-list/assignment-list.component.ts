@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AssignmentModel } from '../assignment.model';
+import { SubtestModel } from '../subtestModel';
 
 @Component({
   selector: 'app-assignment-list',
@@ -8,7 +8,7 @@ import { AssignmentModel } from '../assignment.model';
 })
 export class AssignmentListComponent implements OnInit {
 
-  @Input() assignments: AssignmentModel[]
+  @Input() assignments: SubtestModel[]
 
   constructor() { }
 

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { AssignmentModel } from '../assignment.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SubtestModel } from '../subtestModel';
+import { ColorEnum } from '../click-color.directive';
 
 
 @Component({
@@ -8,15 +9,21 @@ import { AssignmentModel } from '../assignment.model';
   styleUrls: ['./arc-item.component.scss'],
 })
 export class ArcItemComponent implements OnInit{
-  @Input() assignment: AssignmentModel = {
-    id: 0,
-    boxes: []
-  };
+  @Input() subtest: string[] = [];
+  @Output() emitResults = new EventEmitter();
 
-  values: any = new Array(10).fill('white');
+  values: any = new Array(9).fill(ColorEnum.Peignoir);
 
   ngOnInit() {
-    this.values.splice(0, this.assignment.boxes.length, ...this.assignment.boxes)
+    this.values.splice(0, this.subtest.length, ...this.subtest)
   }
 
+  updateValue(color: string, index: number) {
+    // console.log('Color: ', color);
+    // console.log('Index: ', index);
+    this.subtest[index] = color;
+    // console.log('this.values: ', this.values);
+    console.log('this.values: ', this.subtest);
+    this.emitResults.emit(this.subtest)
+  }
 }
