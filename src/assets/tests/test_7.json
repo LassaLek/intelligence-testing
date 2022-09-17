@@ -1,0 +1,71 @@
+{
+  "test_id": 7,
+  "total": 52,
+  "test_type": "pattern",
+  "assignments": [
+    {
+      "id": 1,
+      "type": "CTest",
+      "boxes": ["c", "a", "c", "c", "b", "c", "c", null, null],
+      "result": ["a", "c", "c", "c", "b", "c", "c", "c", "a"],
+      "score": 4
+    },
+    {
+      "id": 2,
+      "type": "ColorSwitchAdvanced",
+      "boxes": ["a", "c", "a", "a", "b", "a", "a", "c", "a"],
+      "result": ["c", "a", "c", "c", "b", "c", "c", "a", "c"],
+      "score": 7
+    },
+    {
+      "id": 3,
+      "type": "ColorSwitchAdvanced",
+      "boxes": ["b", "b", "c", "b", "a", "b", "c", "b", "b"],
+      "result": ["c", "c", "a", "c", "b", "c", "a", "c", "c"],
+      "score": 7
+    },
+    {
+      "id": 4,
+      "type": "CTest",
+      "boxes": ["c", null, null, "a", "b", "a", "c", "c", "c"],
+      "result": ["c", "c", "c", "a", "b", "a", "c", "c", "c"],
+      "score": 6
+    },
+    {
+      "id": 5,
+      "type": "CTest2",
+      "boxes": ["b", "b", "b", "b", "a", "b", null, null, null],
+      "result": ["b", "b", "b", "b", "a", "b", "b", "b", "b"],
+      "score": 4
+    },
+    {
+      "id": 6,
+      "type": "CTest",
+      "boxes": ["c", null, null, "a", "b", "a", "c", "c", "c"],
+      "result": ["c", "c", "c", "a", "b", "a", "c", "c", "c"],
+      "score": 6
+    },
+    {
+      "id": 7,
+      "type": "ColorSwitchAdvanced",
+      "boxes": ["b", "b", "c", "b", "a", "b", "c", "b", "b"],
+      "result": ["c", "c", "a", "c", "b", "c", "a", "c", "c"],
+      "score": 7
+    },
+    {
+      "id": 8,
+      "type": "ColorSwitchAdvanced",
+      "boxes": ["a", "c", "a", "a", "b", "a", "a", "c", "a"],
+      "result": ["c", "a", "c", "c", "b", "c", "c", "a", "c"],
+      "score": 7
+    },
+    {
+      "id": 9,
+      "type": "CTest",
+      "boxes": ["c", "a", "c", "c", "b", "c", "c", null, null],
+      "result": ["a", "c", "c", "c", "b", "c", "c", "c", "a"],
+      "score": 4
+    }
+  ]
+}
+

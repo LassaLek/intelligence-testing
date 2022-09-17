@@ -1,13 +1,25 @@
 import { Component } from '@angular/core';
 import test1 from '../assets/tests/test_1.json';
+import test2 from '../assets/tests/test_2.json';
+import test3 from '../assets/tests/test_3.json';
+import test4 from '../assets/tests/test_4.json';
+import test5 from '../assets/tests/test_5.json';
+import test6 from '../assets/tests/test_6.json';
+import test7 from '../assets/tests/test_7.json';
+import test8 from '../assets/tests/test_8.json';
+import test9 from '../assets/tests/test_9.json';
+
 import { TestModel } from './test.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SharedService } from './shared.service';
-import { FormControl, Validators } from '@angular/forms';
+import { SubtestModel } from './subtestModel';
+const tests = [test1, test2, test3, test4, test5, test6, test7, test8, test9 ].sort(function (a, b) {
+  return a.total - b.total;
+});
 
 const Config = {
-  timeForTestSet: 60 * 60, //five minutes is 300 seconds! // TODO proper count
-  testSetSize: 3 // TODO proper count
+  timeForTestSet: 5 * 60, //five minutes is 300 seconds!
+  testSetSize: tests.length
 }
 
 @Component({
@@ -16,31 +28,31 @@ const Config = {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  testSet = SharedService.getRandomOrder(Config.testSetSize);
-  private timerInterval;
-  title = 'intelligence-testing';
+  config;
   currentTest: TestModel = null;
-  currentTestCounter = null;
+  currentTestCounter = 0;
   score = 0;
   maximalScore = 0;
   timer = '5:00';
   timerProgress = 100;
   resultData = new Map<number, any>();
-  // TODO remove
-  name = 'Petr';
-  // TODO remove
-  iq = 200;
-
+  name;
+  iq;
   currentResults = new Array(9).fill(false);
+  private timerInterval;
   private currentAnswers: string[][] = [];
 
-  constructor(private snackBar: MatSnackBar) {
+  constructor(private snackBar: MatSnackBar, private sharedService: SharedService) {
+    // TODO - Generate some RANDOM test
+    let gen = this.sharedService.generateTest(22);
+    console.log(gen);
+
+    this.startTheTest();
   }
 
   updateTestResults(results: string[][]) {
     this.currentAnswers = results;
     this.currentResults =  this.currentAnswers.map((    answers, index) => {
-      // ["b", "a", "a", "a", "a", "a", "a", "a", "a"]
       return (answers.length > 0 && SharedService.areResultsEqual(answers, this.currentTest.assignments[index].result));
     });
   }
@@ -59,13 +71,12 @@ export class AppComponent {
    */
   startTheTest() {
     // clear previous test session
-
     this.score = 0;
     this.maximalScore = 0;
     this.resultData.clear();
 
     // init test session
-    this.testSet = SharedService.getRandomOrder(Config.testSetSize);
+    // this.testSet = SharedService.getRandomOrder(Config.testSetSize);
     this.currentTest = this.getTest();
     this.currentResults.fill(false, 0, this.currentTest.assignments.length);
 
@@ -77,14 +88,15 @@ export class AppComponent {
    * This method will end the test. It will count the score, save the results, and reset the test.
    */
   processTheTest() {
-    console.log('All test answers: ', this.currentAnswers);
-    console.log('All test results: ', this.currentResults);
+    // console.log('All test answers: ', this.currentAnswers);
+    // console.log('All test results: ', this.currentTest.assignments.map((ass: SubtestModel) => ass.result));
+    // console.log('All test results: ', this.currentResults);
     const oneTestResult = this.countTheTestScore(this.currentResults, this.currentTest);
     this.snackBar.open('Test score:' + oneTestResult, null, {
       duration: 2000,
       verticalPosition: 'top',
     });
-    this.resultData.set(this.currentTestCounter, {score: this.score, answers:  this.currentAnswers, results: this.currentResults, test: this.currentTest})
+    this.resultData.set(this.currentTest.test_id, {score: this.score, answers:  this.currentAnswers, results: this.currentResults, test: this.currentTest})
     this.currentTest = this.getTest();
     if(!this.currentTest) {
       this.endTheSet();
@@ -92,8 +104,8 @@ export class AppComponent {
   }
 
   getTest(): TestModel{
-    this.currentTestCounter = this.testSet.pop();
-    return test1[this.currentTestCounter - 1];
+    this.currentTestCounter++;
+    return tests[this.currentTestCounter];
   }
 
   /**
@@ -104,13 +116,11 @@ export class AppComponent {
     this.saveTestResults(this.resultData);
     // clear the test session
     this.currentTest = null;
-    this.currentTestCounter = null;
+    this.currentTestCounter = 0;
     // stop the timer
     clearInterval(this.timerInterval);
   }
 
-
-  // TODO - to service
   countTheTestScore(results: boolean[], test: TestModel): string {
     let oneTestResult = 0;
     let oneTestMaximalResult = 0;

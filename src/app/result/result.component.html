@@ -1,4 +1,4 @@
-<div class="card card-small">
+<div class="card card-small" *ngIf="result">
   <app-arc-item [subtest]="result" (emitResults)="updateResults($event)"></app-arc-item>
 </div>
 
