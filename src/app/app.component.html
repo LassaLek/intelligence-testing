@@ -94,6 +94,7 @@
     border-radius: 6px;
     padding-top: 45px;
     margin-top: 200px;
+    margin-bottom: 10px;
     overflow: hidden;
     background-color: rgb(15, 15, 16);
   }
@@ -111,6 +112,7 @@
     line-height: 0;
     padding: 14px 0;
     text-indent: 4px;
+
   }
 
   .terminal pre {
@@ -166,36 +168,14 @@
 <div class="toolbar" role="banner">
   <img
     width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+    alt="VSE Logo"
+    src="assets/logo.png"
   />
   <span>Composite testing</span>
   <div class="spacer"></div>
-  <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
-
-    <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg"
-         viewBox="0 0 400 400">
-      <defs>
-        <style>
-          .cls-1 {
-            fill: none;
-          }
-
-          .cls-2 {
-            fill: #ffffff;
-          }
-        </style>
-      </defs>
-      <rect class="cls-1" width="400" height="400"/>
-      <path class="cls-2"
-            d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
-      />
-    </svg>
-
-  </a>
 </div>
 
-<div class="content" role="main">
+<div role="main">
   <div *ngIf="currentTest ;else init_test">
     <!--TODO show when test started - run counter-->
     <div id="wrapper">
@@ -209,27 +189,40 @@
       </div>
     </div>
 
-    <button mat-raised-button (click)="processTheTest()">Submit</button>
+    <button class="center" mat-raised-button color="accent" (click)="processTheTest()">Submit</button>
     <!-- Terminal -->
-    <div class="terminal">
-      <pre>Result: {{score}}</pre>
+    <div class="terminal center">
+      <pre>Result: {{score + "/" + maximalScore}}</pre>
     </div>
 
     <mat-progress-bar mode="determinate" value="{{timerProgress}}"></mat-progress-bar>
-    {{timer}}
+    <div class="center">{{timer}}</div>
   </div>
 
   <ng-template #init_test>
-    <div *ngIf="score" style="font-size: 50px">
-      <pre>{{score}}</pre>
-    </div>
-<!--    <video autoplay loop>
-      <source src="assets/video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>-->
-    <iframe width="1240" height="720" src="assets/video.mp4" frameborder="0" allowfullscreen allow='autoplay'></iframe>
+    <div class="intro_content">
+      <div *ngIf="score" style="font-size: 50px">
+        <pre>{{score + "/"  + maximalScore}}</pre>
+      </div>
+      <!--    <video autoplay loop>
+            <source src="assets/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>-->
+      <div *ngIf="!score">
+        <mat-form-field appearance="fill" >
+          <mat-label>Jméno:</mat-label>
+          <input matInput placeholder="Novák" name="name" type="text"  [(ngModel)]="name" required>
+        </mat-form-field>
 
-    <button class="center" mat-raised-button (click)="startTheTest()">Start</button>
+        <mat-form-field appearance="fill" >
+          <mat-label>Výsledek prvního testu:</mat-label>
+          <input matInput name="iq" type="number" placeholder="110" [(ngModel)]="iq" required>
+        </mat-form-field>
+      </div>
+      <iframe width="1240" height="720" src="assets/video.mp4" frameborder="0" allowfullscreen allow='autoplay'></iframe>
+
+      <button class="center" mat-raised-button color="primary" (click)="startTheTest()" [disabled]="!name || !iq">Start</button>
+    </div>
   </ng-template>
 
 
@@ -248,7 +241,6 @@
           <img src="assets/logo.png" alt="Logo VSE" width="50">
         </a>
       </div>
-      Petr Hoza
     </div>
   </footer>
 

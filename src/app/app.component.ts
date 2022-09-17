@@ -3,9 +3,10 @@ import test1 from '../assets/tests/test_1.json';
 import { TestModel } from './test.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SharedService } from './shared.service';
+import { FormControl, Validators } from '@angular/forms';
 
 const Config = {
-  timeForTestSet: 5 * 60 //five minutes is 300 seconds!
+  timeForTestSet: 60 * 60 //five minutes is 300 seconds! // TODO proper count
 }
 
 @Component({
@@ -19,8 +20,13 @@ export class AppComponent {
   currentTest: TestModel = null;
   currentTestCounter = 0;
   score = 0;
+  maximalScore = 0;
   timer = '5:00';
   timerProgress = 100;
+  resultData = new Map<number, any>();
+  name;
+  iq;
+
 
   private currentResults: boolean[] = [];
 
@@ -38,10 +44,8 @@ export class AppComponent {
 
     // TODO Pick a random test from the list of tests
     this.currentTest = test1[SharedService.getRandomInt(test1.length)];
+    this.currentResults.fill(false, 0, this.currentTest.assignments.length);
 
-    // TODO Initiate the test - results, score, ...
-
-    // TODO set the test timer
     this.setTestTimer();
   }
 
@@ -49,19 +53,13 @@ export class AppComponent {
    * This method will end the test. It will count the score, save the results, and reset the test.
    */
   processTheTest() {
-
-    // TODO count the score - not all correct, more tries
-
-
-    // TODO - some score ALERT - modal - TOAST
-
-    let testResult = this.countTheTestScore(this.currentResults, this.currentTest);
-    let snackBarRef = this.snackBar.open('Test score:' + testResult, null, {
+    this.countTheTestScore(this.currentResults, this.currentTest);
+    this.snackBar.open('Test score:' + this.score + "/"  + this.maximalScore, null, {
       duration: 2000,
       verticalPosition: 'top',
     });
-    console.log('AppComponent testResult:', testResult);
-
+    console.log('AppComponent testResult:', this.score);
+    this.resultData.set(this.currentTestCounter, {score: this.score, results: this.currentResults, id: this.currentTest.test_id})
     // TODO switch test
     this.currentTestCounter++;
     this.currentTest = test1[SharedService.getRandomInt(test1.length)];
@@ -75,33 +73,42 @@ export class AppComponent {
    * This will conclude the testing session.
    */
   endTheSet() {
-
-    // TODO save results to a file
-    // this.saveTestResults({totalScore: this.score, results: this.currentResults});
-
+    // save results to a file
+    // TODO proper map mapping
+    this.saveTestResults(this.resultData);
+    // clear the test session
     this.currentTest = null;
-    // TODO stop the timer
+    this.currentTestCounter = 0;
+    // stop the timer
     clearInterval(this.timerInterval);
   }
 
 
   // TODO - to service
-  countTheTestScore(results: boolean[], test: TestModel): number {
+  countTheTestScore(results: boolean[], test: TestModel): void {
     results.forEach((result, index) => {
       if (result) {
-        this.score += 10;
+        this.score += test.assignments[index].score;
       }
+      this.maximalScore += test.assignments[index].score;
     });
-    return this.score;
   }
 
   // TODO - log + to service
-  saveTestResults(data) {
+  saveTestResults(data: Map<number, any>) {
+    const obj = {};
+    for (const item of [...data]) {
+      const [
+        key,
+        value
+      ] = item;
+      obj[key] = value;
+    }
     var a = document.createElement("a");
     document.body.appendChild(a);
     (<any>a).style = "display: none";
-    let fileName = "my-download.json";
-    var json = JSON.stringify(data),
+    let fileName = `${this.name}_${this.iq}.json`;
+    var json = JSON.stringify(obj),
       blob = new Blob([json], {type: "octet/stream"}),
       url = (<any>window).URL.createObjectURL(blob);
     a.href = url;
@@ -113,13 +120,13 @@ export class AppComponent {
   private setTestTimer() {
     const countDownDate = new Date().getTime() + Config.timeForTestSet * 1000;
 
-// Update the count down every 1 second
+// Update the count-down every 1 second
     this.timerInterval = setInterval(() => {
 
       // Get today's date and time
       const now = new Date().getTime();
 
-      // Find the distance between now and the count down date
+      // Find the distance between now and the count-down date
       const distance = countDownDate - now;
 
       // Time calculations for days, hours, minutes and seconds
@@ -129,9 +136,7 @@ export class AppComponent {
       // Display the result in the element with id="demo"
       this.timer = minutes + "m " + seconds + "s ";
       this.timerProgress = (distance / (Config.timeForTestSet * 1000)) * 100;
-      console.log('AppComponent minutes:', minutes);
-      console.log('AppComponent seconds:', seconds);
-      // If the count down is finished, write some text
+      // If the count-down is finished, write some text
       if (distance < 0) {
         this.endTheSet()
       }
