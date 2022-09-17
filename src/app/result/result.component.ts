@@ -22,7 +22,7 @@ export class ResultComponent {
     this._subtest = value;
   }
 
-  // TODO here you can turn on/off the cheat sheet
+  // here you can turn on/off the cheat sheet
   @Input() isCheatSheet;
   @Output() resultChange = new EventEmitter<string[]>();
   result;

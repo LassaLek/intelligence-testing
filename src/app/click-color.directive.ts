@@ -22,11 +22,10 @@ export class ClickColorDirective {
   constructor(private doms: DomSanitizer) { }
 
   @HostBinding('style') get myStyle(): SafeStyle {
-    return this.doms.bypassSecurityTrustStyle(`background: ${ColorEnum[this.colorCode] || 'white'}`);
+    return this.doms.bypassSecurityTrustStyle(`background: ${ColorEnum[this.colorCode] || 'white'}; ${(this.isResult ? 'cursor: pointer;' : '')}`);
   }
 
   @HostListener('click') onClick() {
-    // TODO change for DEV purposes
     if(this.isResult){
       this.colorCode = colors[colors.indexOf(this.colorCode) + 1];
       this.updateValue.emit(this.colorCode);

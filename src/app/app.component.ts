@@ -45,7 +45,7 @@ export class AppComponent {
   private currentAnswers: string[][] = [];
 
   constructor(private snackBar: MatSnackBar, private sharedService: SharedService) {
-    // TODO - Generate some RANDOM test
+    // Can generate some RANDOM test
     // let gen = this.sharedService.generateTest(22);
     // console.log(gen);
 
