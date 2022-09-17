@@ -206,13 +206,10 @@
       <!-- Results -->
       <div id="results">
         <app-result-list [subtests]="currentTest.assignments" (testResults)="updateTestResults($event)"></app-result-list>
-
       </div>
-
-
     </div>
 
-    <button mat-button (click)="processTheTest()">Submit</button>
+    <button mat-raised-button (click)="processTheTest()">Submit</button>
     <!-- Terminal -->
     <div class="terminal">
       <pre>Result: {{score}}</pre>
@@ -223,30 +220,36 @@
   </div>
 
   <ng-template #init_test>
+    <div *ngIf="score" style="font-size: 50px">
+      <pre>{{score}}</pre>
+    </div>
+<!--    <video autoplay loop>
+      <source src="assets/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>-->
+    <iframe width="1240" height="720" src="assets/video.mp4" frameborder="0" allowfullscreen allow='autoplay'></iframe>
 
-    other content here...
-    TODO - some embeded video
-    TODO - some description end explanation
-
-    <button mat-button (click)="startTheTest()">Start</button>
+    <button class="center" mat-raised-button (click)="startTheTest()">Start</button>
   </ng-template>
 
 
   <!-- Footer -->
   <footer>
     <!-- Links -->
-    <div class="card-container">
-      <a class="circle-link" title="Animations" href="https://kizi.vse.cz/english/" target="_blank" rel="noopener">
-        <!--      <svg id="Group_20" data-name="Group 20" xmlns="http://www.w3.org/2000/svg" width="21.813" height="23.453"
-                   viewBox="0 0 21.813 23.453">
-                <path id="Path_15" data-name="Path 15"
-                      d="M4099.584,972.736h0l-10.882,3.9,1.637,14.4,9.245,5.153,9.245-5.153,1.686-14.4Z"
-                      transform="translate(-4088.702 -972.736)" fill="#ffa726"/>
-              </svg>-->
-        <img src="assets/logo.png" alt="Logo VSE" width="50">
-      </a>
+    <div class="center">
+      <div class="card-container">
+        <a class="circle-link" title="Animations" href="https://kizi.vse.cz/english/" target="_blank" rel="noopener">
+          <!--      <svg id="Group_20" data-name="Group 20" xmlns="http://www.w3.org/2000/svg" width="21.813" height="23.453"
+                     viewBox="0 0 21.813 23.453">
+                  <path id="Path_15" data-name="Path 15"
+                        d="M4099.584,972.736h0l-10.882,3.9,1.637,14.4,9.245,5.153,9.245-5.153,1.686-14.4Z"
+                        transform="translate(-4088.702 -972.736)" fill="#ffa726"/>
+                </svg>-->
+          <img src="assets/logo.png" alt="Logo VSE" width="50">
+        </a>
+      </div>
+      Petr Hoza
     </div>
-    Petr Hoza
   </footer>
 
   <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677"
