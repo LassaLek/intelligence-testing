@@ -6,7 +6,8 @@ import { SharedService } from './shared.service';
 import { FormControl, Validators } from '@angular/forms';
 
 const Config = {
-  timeForTestSet: 60 * 60 //five minutes is 300 seconds! // TODO proper count
+  timeForTestSet: 60 * 60, //five minutes is 300 seconds! // TODO proper count
+  testSetSize: 3 // TODO proper count
 }
 
 @Component({
@@ -15,37 +16,60 @@ const Config = {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  testSet = SharedService.getRandomOrder(Config.testSetSize);
   private timerInterval;
   title = 'intelligence-testing';
   currentTest: TestModel = null;
-  currentTestCounter = 0;
+  currentTestCounter = null;
   score = 0;
   maximalScore = 0;
   timer = '5:00';
   timerProgress = 100;
   resultData = new Map<number, any>();
-  name;
-  iq;
+  // TODO remove
+  name = 'Petr';
+  // TODO remove
+  iq = 200;
 
-
-  private currentResults: boolean[] = [];
+  currentResults = new Array(9).fill(false);
+  private currentAnswers: string[][] = [];
 
   constructor(private snackBar: MatSnackBar) {
   }
 
-  updateTestResults(results: boolean[]) {
-    this.currentResults = results;
+  updateTestResults(results: string[][]) {
+    this.currentAnswers = results;
+    this.currentResults =  this.currentAnswers.map((    answers, index) => {
+      // ["b", "a", "a", "a", "a", "a", "a", "a", "a"]
+      return (answers.length > 0 && SharedService.areResultsEqual(answers, this.currentTest.assignments[index].result));
+    });
+  }
+
+  assignmentOpened(id: number) {
+    this.currentTest.assignments = this.currentTest.assignments.map((ass) => {
+      if(ass.id === id){
+        ass.opened = true;
+      }
+      return ass;
+    });
   }
 
   /**
    * This method will initialize the test. It will set a random test from the list of tests to currentTest. It will set the test timer for the test.
    */
   startTheTest() {
+    // clear previous test session
 
-    // TODO Pick a random test from the list of tests
-    this.currentTest = test1[SharedService.getRandomInt(test1.length)];
+    this.score = 0;
+    this.maximalScore = 0;
+    this.resultData.clear();
+
+    // init test session
+    this.testSet = SharedService.getRandomOrder(Config.testSetSize);
+    this.currentTest = this.getTest();
     this.currentResults.fill(false, 0, this.currentTest.assignments.length);
 
+    // init timer
     this.setTestTimer();
   }
 
@@ -53,20 +77,23 @@ export class AppComponent {
    * This method will end the test. It will count the score, save the results, and reset the test.
    */
   processTheTest() {
-    this.countTheTestScore(this.currentResults, this.currentTest);
-    this.snackBar.open('Test score:' + this.score + "/"  + this.maximalScore, null, {
+    console.log('All test answers: ', this.currentAnswers);
+    console.log('All test results: ', this.currentResults);
+    const oneTestResult = this.countTheTestScore(this.currentResults, this.currentTest);
+    this.snackBar.open('Test score:' + oneTestResult, null, {
       duration: 2000,
       verticalPosition: 'top',
     });
-    console.log('AppComponent testResult:', this.score);
-    this.resultData.set(this.currentTestCounter, {score: this.score, results: this.currentResults, id: this.currentTest.test_id})
-    // TODO switch test
-    this.currentTestCounter++;
-    this.currentTest = test1[SharedService.getRandomInt(test1.length)];
-    // TODO end the test after XXX
-    if(this.currentTestCounter > 3) {
+    this.resultData.set(this.currentTestCounter, {score: this.score, answers:  this.currentAnswers, results: this.currentResults, test: this.currentTest})
+    this.currentTest = this.getTest();
+    if(!this.currentTest) {
       this.endTheSet();
     }
+  }
+
+  getTest(): TestModel{
+    this.currentTestCounter = this.testSet.pop();
+    return test1[this.currentTestCounter - 1];
   }
 
   /**
@@ -74,27 +101,31 @@ export class AppComponent {
    */
   endTheSet() {
     // save results to a file
-    // TODO proper map mapping
     this.saveTestResults(this.resultData);
     // clear the test session
     this.currentTest = null;
-    this.currentTestCounter = 0;
+    this.currentTestCounter = null;
     // stop the timer
     clearInterval(this.timerInterval);
   }
 
 
   // TODO - to service
-  countTheTestScore(results: boolean[], test: TestModel): void {
+  countTheTestScore(results: boolean[], test: TestModel): string {
+    let oneTestResult = 0;
+    let oneTestMaximalResult = 0;
     results.forEach((result, index) => {
       if (result) {
         this.score += test.assignments[index].score;
+        oneTestResult += test.assignments[index].score;
       }
       this.maximalScore += test.assignments[index].score;
+      oneTestMaximalResult += test.assignments[index].score;
     });
+
+    return oneTestResult + "/" + oneTestMaximalResult;
   }
 
-  // TODO - log + to service
   saveTestResults(data: Map<number, any>) {
     const obj = {};
     for (const item of [...data]) {

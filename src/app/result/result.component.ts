@@ -8,23 +8,16 @@ import { SharedService } from '../shared.service';
   templateUrl: './result.component.html',
   styleUrls: ['./result.component.scss']
 })
-export class ResultComponent implements OnInit {
+export class ResultComponent {
   @Input() subtest: SubtestModel;
-  @Output() resultChange = new EventEmitter();
+  @Output() resultChange = new EventEmitter<string[]>();
 
-  result = new Array(9).fill(ColorEnum.Peignoir);
+  result = new Array(9).fill('a');
   constructor() { }
-
-  ngOnInit() {
-    console.log('ResultComponent result:', this.subtest);
-
-  }
 
   updateResults(result: string[]) {
     this.result = result;
-    console.log('ResultComponent result:', this.result);
-    console.log('Is result correct:', SharedService.areResultsEqual(this.result, this.subtest.result));
-    this.resultChange.emit(SharedService.areResultsEqual(this.result, this.subtest.result));
+    this.resultChange.emit(this.result);
   }
 
 }

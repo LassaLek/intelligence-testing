@@ -6,23 +6,16 @@ import { SubtestModel } from '../subtestModel';
   templateUrl: './result-list.component.html',
   styleUrls: ['./result-list.component.scss']
 })
-export class ResultListComponent implements OnInit {
+export class ResultListComponent {
 
   @Input() subtests: SubtestModel[]
-  subtestResults = new Array(9).fill(false);
+  subtestResults = new Array(9).fill([]);
 
   @Output() testResults = new EventEmitter();
   constructor() { }
 
-  ngOnInit() {
-    console.log('ResultListComponent results:', this.subtests);
-  }
-
-  updateSubtestResults(result: boolean, index: number) {
-    console.log('ResultListComponent result:', result);
-    console.log('ResultListComponent index:', index);
-    this.subtestResults[index] = result;
-    console.log('ResultListComponent this.subtestResults:', this.subtestResults);
+  updateSubtestResults(result: string[], id: number) {
+    this.subtestResults[id - 1] = result;
     this.testResults.emit(this.subtestResults);
   }
 

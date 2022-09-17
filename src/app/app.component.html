@@ -181,7 +181,10 @@
     <div id="wrapper">
       <!-- Assignments -->
       <div id="assignments">
-        <app-assignment-list [assignments]="currentTest.assignments"></app-assignment-list>
+        <app-assignment-list
+          [assignments]="currentTest.assignments"
+          (assignmentOpened)="assignmentOpened($event)"
+        ></app-assignment-list>
       </div>
       <!-- Results -->
       <div id="results">
