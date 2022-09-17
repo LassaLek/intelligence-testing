@@ -19,12 +19,11 @@ export class ResultComponent {
     } else {
       this.result = value?.result
     }
-    this.result = value?.result
     this._subtest = value;
   }
 
-  // @Input() subtest: SubtestModel;
-  @Input() isCheatSheet = true;
+  // TODO here you can turn on/off the cheat sheet
+  @Input() isCheatSheet;
   @Output() resultChange = new EventEmitter<string[]>();
   result;
 
