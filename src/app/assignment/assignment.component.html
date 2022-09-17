@@ -1,6 +1,6 @@
 <div class="card card-small" (click)="changeState()" [@widthGrow]="state">
     <div *ngIf="state === 'closed'; else arc">
-      <button mat-raised-button color="primary" style="margin-top: 1px;">Open TEST - {{assignment.id}} - {{assignment.type}}</button>
+      <button class="center" mat-raised-button color="primary" style="margin-top: 1px;">Otevřít příklad pro test č. {{assignment.id}} </button>
     </div>
 
     <ng-template #arc>

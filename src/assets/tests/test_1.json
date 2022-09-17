@@ -1,206 +1,70 @@
-[
-  {
-    "test_id": 1,
-    "assignments": [
-      {
-        "id": 1,
-        "type": "ColorSwitch",
-        "boxes": ["b", "a", "a", "a", "b", "a", "a", "a", "a"],
-        "result": ["a", "b", "b", "b", "a", "b", "b", "b", "b"],
-        "score": 3
-      },
-      {
-        "id": 2,
-        "type": "ColorSwitch",
-        "boxes": ["a", "b", "a", "a", "b", "a", "a", "a", "a"],
-        "result": ["b", "a", "b", "b", "a", "b", "b", "b", "b"],
-        "score": 3
-      },
-      {
-        "id": 3,
-        "type": "ColorSwitch",
-        "boxes": ["a", "a", "b", "a", "b", "a", "a", "a", "a"],
-        "result": ["b", "b", "a", "b", "a", "b", "b", "b", "b"],
-        "score": 3
-      },
-      {
-        "id": 4,
-        "type": "ColorSwitch",
-        "boxes": ["a", "a", "a", "b", "b", "a", "a", "a", "a"],
-        "result": ["b", "b", "b", "a", "a", "b", "b", "b", "b"],
-        "score": 3
-      },
-      {
-        "id": 5,
-        "type": "ColorSwitch",
-        "boxes": ["a", "a", "a", "a", "b", "a", "a", "a", "a"],
-        "result": ["b", "b", "b", "b", "a", "b", "b", "b", "b"],
-        "score": 3
-      },
-      {
-        "id": 6,
-        "type": "ColorSwitch",
-        "boxes": ["a", "a", "a", "a", "b", "b", "a", "a", "a"],
-        "result": ["b", "b", "b", "b", "a", "a", "b", "b", "b"],
-        "score": 3
-      },
-      {
-        "id": 7,
-        "type": "ColorSwitch",
-        "boxes": ["a", "a", "a", "a", "b", "a", "b", "a", "a"],
-        "result": ["b", "b", "b", "b", "a", "b", "a", "b", "b"],
-        "score": 3
-      },
-      {
-        "id": 8,
-        "type": "ColorSwitch",
-        "boxes": ["a", "a", "a", "a", "b", "a", "a", "b", "a"],
-        "result": ["b", "b", "b", "b", "a", "b", "b", "a", "b"],
-        "score": 3
-      },
-      {
-        "id": 9,
-        "type": "ColorSwitch",
-        "boxes": ["a", "a", "a", "a", "b", "a", "a", "a", "b"],
-        "result": ["b", "b", "b", "b", "a", "b", "b", "b", "a"],
-        "score": 3
-      }
-    ]
-  },
-  {
-    "test_id": 2,
-    "assignments": [
-      {
-        "id": 1,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["b", "a", "a", "a", "b", "a", "a", "a", "b"],
-        "result": ["c", "b", "b", "b", "c", "b", "b", "b", "c"],
-        "score": 5
-      },
-      {
-        "id": 2,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "b", "a", "a", "b", "a", "a", "b", "a"],
-        "result": ["b", "c", "b", "b", "c", "b", "b", "c", "a"],
-        "score": 5
-      },
-      {
-        "id": 3,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "a", "b", "a", "b", "a", "b", "a", "a"],
-        "result": ["b", "b", "c", "b", "c", "b", "c", "b", "b"],
-        "score": 5
-      },
-      {
-        "id": 4,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "a", "a", "b", "b", "b", "a", "a", "a"],
-        "result": ["b", "b", "b", "c", "c", "c", "b", "b", "b"],
-        "score": 5
-      },
-      {
-        "id": 5,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "a", "a", "a", "b", "a", "a", "a", "a"],
-        "result": ["b", "b", "b", "b", "c", "b", "b", "b", "b"],
-        "score": 5
-      },
-      {
-        "id": 6,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "a", "a", "b", "b", "b", "a", "a", "a"],
-        "result": ["b", "b", "b", "c", "c", "c", "b", "b", "b"],
-        "score": 5
-      },
-      {
-        "id": 7,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "a", "b", "a", "b", "a", "b", "a", "a"],
-        "result": ["b", "b", "c", "b", "c", "b", "c", "b", "b"],
-        "score": 5
-      },
-      {
-        "id": 8,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "b", "a", "a", "b", "a", "a", "b", "a"],
-        "result": ["b", "c", "b", "b", "c", "b", "b", "c", "a"],
-        "score": 5
-      },
-      {
-        "id": 9,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["b", "a", "a", "a", "b", "a", "a", "a", "b"],
-        "result": ["c", "b", "b", "b", "c", "b", "b", "b", "c"],
-        "score": 5
-      }
-    ]
-  },
-  {
-    "test_id": 3,
-    "assignments": [
-      {
-        "id": 1,
-        "type": "CTest",
-        "boxes": ["a", "a", "a", "a", "a", "a", "a", "a", null],
-        "result": ["a", "a", "a", "a", "a", "a", "a", "a", "a"],
-        "score": 1
-      },
-      {
-        "id": 2,
-        "type": "CTest",
-        "boxes": ["b", "b", "b", "b", "b", "b", null, null, null],
-        "result": ["a", "a", "a", "a", "a", "a", "a", "a", "a"],
-        "score": 3
-      },
-      {
-        "id": 3,
-        "type": "CTest",
-        "boxes": ["a", "a", "b", "a", "b", "a", "a", "a", null],
-        "result": ["a", "a", "b", "a", "b", "a", "a", "a", "b"],
-        "score": 5
-      },
-      {
-        "id": 4,
-        "type": "CTest",
-        "boxes": ["a", "b", "c", "a", "b", "c", "a", "b", null],
-        "result": ["a", "b", "c", "a", "b", "c", "a", "b", "c"],
-        "score": 5
-      },
-      {
-        "id": 5,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "a", "a", "a", "b", "a", "a", "a", "a"],
-        "result": ["b", "b", "b", "b", "c", "b", "b", "b", "b"],
-        "score": 5
-      },
-      {
-        "id": 6,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "a", "a", "b", "b", "b", "a", "a", "a"],
-        "result": ["b", "b", "b", "c", "c", "c", "b", "b", "b"],
-        "score": 5
-      },
-      {
-        "id": 7,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "a", "b", "a", "b", "a", "b", "a", "a"],
-        "result": ["b", "b", "c", "b", "c", "b", "c", "b", "b"],
-        "score": 5
-      },
-      {
-        "id": 8,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["a", "b", "a", "a", "b", "a", "a", "b", "a"],
-        "result": ["b", "c", "b", "b", "c", "b", "b", "c", "a"],
-        "score": 5
-      },
-      {
-        "id": 9,
-        "type": "ColorSwitchAdvanced",
-        "boxes": ["b", "a", "a", "a", "b", "a", "a", "a", "b"],
-        "result": ["c", "b", "b", "b", "c", "b", "b", "b", "c"],
-        "score": 5
-      }
-    ]
-  }
-]
+{
+  "test_id": 1,
+  "total": 27,
+  "test_type": "pattern",
+  "assignments": [
+    {
+      "id": 1,
+      "type": "ColorSwitch",
+      "boxes": ["b", "a", "a", "a", "b", "a", "a", "a", "a"],
+      "result": ["a", "b", "b", "b", "a", "b", "b", "b", "b"],
+      "score": 3
+    },
+    {
+      "id": 2,
+      "type": "ColorSwitch",
+      "boxes": ["a", "b", "a", "a", "b", "a", "a", "a", "a"],
+      "result": ["b", "a", "b", "b", "a", "b", "b", "b", "b"],
+      "score": 3
+    },
+    {
+      "id": 3,
+      "type": "ColorSwitch",
+      "boxes": ["a", "a", "b", "a", "b", "a", "a", "a", "a"],
+      "result": ["b", "b", "a", "b", "a", "b", "b", "b", "b"],
+      "score": 3
+    },
+    {
+      "id": 4,
+      "type": "ColorSwitch",
+      "boxes": ["a", "a", "a", "b", "b", "a", "a", "a", "a"],
+      "result": ["b", "b", "b", "a", "a", "b", "b", "b", "b"],
+      "score": 3
+    },
+    {
+      "id": 5,
+      "type": "ColorSwitch",
+      "boxes": ["a", "a", "a", "a", "b", "a", "a", "a", "a"],
+      "result": ["b", "b", "b", "b", "a", "b", "b", "b", "b"],
+      "score": 3
+    },
+    {
+      "id": 6,
+      "type": "ColorSwitch",
+      "boxes": ["a", "a", "a", "a", "b", "b", "a", "a", "a"],
+      "result": ["b", "b", "b", "b", "a", "a", "b", "b", "b"],
+      "score": 3
+    },
+    {
+      "id": 7,
+      "type": "ColorSwitch",
+      "boxes": ["a", "a", "a", "a", "b", "a", "b", "a", "a"],
+      "result": ["b", "b", "b", "b", "a", "b", "a", "b", "b"],
+      "score": 3
+    },
+    {
+      "id": 8,
+      "type": "ColorSwitch",
+      "boxes": ["a", "a", "a", "a", "b", "a", "a", "b", "a"],
+      "result": ["b", "b", "b", "b", "a", "b", "b", "a", "b"],
+      "score": 3
+    },
+    {
+      "id": 9,
+      "type": "ColorSwitch",
+      "boxes": ["a", "a", "a", "a", "b", "a", "a", "a", "b"],
+      "result": ["b", "b", "b", "b", "a", "b", "b", "b", "a"],
+      "score": 3
+    }
+  ]
+}

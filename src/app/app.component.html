@@ -171,7 +171,8 @@
     alt="VSE Logo"
     src="assets/logo.png"
   />
-  <span>Composite testing</span>
+  <!--TODO - just for me -remove after testing-->
+  <span>Kompozitní testování {{currentTest?.test_id}}</span>
   <div class="spacer"></div>
 </div>
 
@@ -192,10 +193,10 @@
       </div>
     </div>
 
-    <button class="center" mat-raised-button color="accent" (click)="processTheTest()">Submit</button>
+    <button class="center" mat-raised-button color="accent" (click)="processTheTest()">Odevzdat sadu testů</button>
     <!-- Terminal -->
     <div class="terminal center">
-      <pre>Result: {{score + "/" + maximalScore}}</pre>
+      <pre>Celkový výsledek: {{score + "/" + maximalScore}}</pre>
     </div>
 
     <mat-progress-bar mode="determinate" value="{{timerProgress}}"></mat-progress-bar>
@@ -224,7 +225,7 @@
       </div>
       <iframe width="1240" height="720" src="assets/video.mp4" frameborder="0" allowfullscreen allow='autoplay'></iframe>
 
-      <button class="center" mat-raised-button color="primary" (click)="startTheTest()" [disabled]="!name || !iq">Start</button>
+      <button class="center" mat-raised-button color="primary" (click)="startTheTest()" [disabled]="!name || !iq">Začít test</button>
     </div>
   </ng-template>
 

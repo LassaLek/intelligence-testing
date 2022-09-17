@@ -8,11 +8,13 @@ import { SubtestModel } from '../subtestModel';
 })
 export class ResultListComponent {
 
-  @Input() subtests: SubtestModel[]
+  @Input() subtests: SubtestModel[];
   subtestResults = new Array(9).fill([]);
 
   @Output() testResults = new EventEmitter();
-  constructor() { }
+  constructor() {
+    console.log('ResultListComponent subtests', this.subtests);
+  }
 
   updateSubtestResults(result: string[], id: number) {
     this.subtestResults[id - 1] = result;

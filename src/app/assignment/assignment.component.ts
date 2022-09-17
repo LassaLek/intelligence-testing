@@ -31,7 +31,8 @@ export class AssignmentComponent {
     assignment: [],
     result: []
   };
-  state = "closed";
+  // TODO init all buttons opened
+  state = "open"// "closed";
 
   changeState(): void {
     (this.state == "closed") ? this.state = "open" : console.log("close attempt");
@@ -57,10 +58,33 @@ export class AssignmentComponent {
         assignment: ["a", "a", "a", "a", "c", "a", "a", "a", "b"],
         result: ["b", "b", "b", "b", "a", "b", "b", "b", "c"],
       }
+    } else if(testType === SubtestTypeEnum.Move) {
+      // move shape by three
+      return {
+        assignment: ['a', 'a', 'c', 'c', 'a', 'c', 'c', 'c', 'c'],
+        result: ['c', 'c', 'c', 'a', 'a', 'c', 'c', 'a', 'c'],
+      }
+    }
+    else if(testType === SubtestTypeEnum.ColorSwitchAndMove) {
+      // move shape by three + repaint
+      return {
+        assignment: ['a', 'a', 'c', 'c', 'a', 'c', 'c', 'c', 'c'],
+        result: ['c', 'c', 'b', 'b', 'c', 'c', 'b', 'c', 'c'],
+      }
+    }  else if(testType === SubtestTypeEnum.PositionSwitch) {
+      return {
+        assignment: ['b', 'b', 'c', 'c', 'b', 'b', 'b', 'a', 'a'],
+        result: ['b', 'b', 'a', 'a', 'b', 'b', 'b', 'c', 'c'],
+      }
+    }else if(testType === SubtestTypeEnum.CTest) {
+      return {
+        assignment: ['b', 'a', 'a', 'b', 'c', 'b', 'a', 'a', null],
+        result: ['b', 'a', 'a', 'b', 'c', 'b', 'a', 'a', 'b'],
+      }
     }
 
     return {
-      assignment: ["a", "b", "c", "a", "b", "c", null, null, null],
+      assignment: ["a", "b", "c", "a", "b", "c", "a", null, null],
       result: ["a", "b", "c", "a", "b", "c", "a", "b", "c"],
     }
   }

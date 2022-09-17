@@ -1,0 +1,250 @@
+{
+  "test_id": 9,
+  "total": 28,
+  "test_type": "generated",
+  "assignments": [
+    {
+      "id": 1,
+      "type": "ColorSwitchAndMove",
+      "boxes": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c"
+      ],
+      "result": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c"
+      ],
+      "score": 0
+    },
+    {
+      "id": 2,
+      "type": "PositionSwitch",
+      "boxes": [
+        "b",
+        "b",
+        "c",
+        "c",
+        "b",
+        "b",
+        "b",
+        "a",
+        "a"
+      ],
+      "result": [
+        "b",
+        "b",
+        "a",
+        "a",
+        "b",
+        "b",
+        "b",
+        "c",
+        "c"
+      ],
+      "score": 4
+    },
+    {
+      "id": 3,
+      "type": "ColorSwitchAdvanced",
+      "boxes": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "b",
+        "a",
+        "a"
+      ],
+      "result": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "b",
+        "b"
+      ],
+      "score": 3
+    },
+    {
+      "id": 4,
+      "type": "ColorSwitchAdvanced",
+      "boxes": [
+        "c",
+        "c",
+        "b",
+        "a",
+        "c",
+        "a",
+        "a",
+        "c",
+        "c"
+      ],
+      "result": [
+        "c",
+        "c",
+        "c",
+        "b",
+        "c",
+        "b",
+        "b",
+        "c",
+        "c"
+      ],
+      "score": 4
+    },
+    {
+      "id": 5,
+      "type": "CTest",
+      "boxes": [
+        "b",
+        "b",
+        "b",
+        "b",
+        "b",
+        "b",
+        "b",
+        null,
+        null
+      ],
+      "result": [
+        "b",
+        "b",
+        "b",
+        "b",
+        "b",
+        "b",
+        "b",
+        "b",
+        "b"
+      ],
+      "score": 2
+    },
+    {
+      "id": 6,
+      "type": "ColorSwitchAndMove",
+      "boxes": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "a",
+        "c",
+        "c",
+        "c"
+      ],
+      "result": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "b"
+      ],
+      "score": 2
+    },
+    {
+      "id": 7,
+      "type": "CTest",
+      "boxes": [
+        "a",
+        "a",
+        "a",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "result": [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      "score": 6
+    },
+    {
+      "id": 8,
+      "type": "PositionSwitch",
+      "boxes": [
+        "b",
+        "b",
+        "c",
+        "c",
+        "b",
+        "b",
+        "b",
+        "a",
+        "a"
+      ],
+      "result": [
+        "b",
+        "b",
+        "a",
+        "a",
+        "b",
+        "b",
+        "b",
+        "c",
+        "c"
+      ],
+      "score": 4
+    },
+    {
+      "id": 9,
+      "type": "ColorSwitchAdvanced",
+      "boxes": [
+        "c",
+        "c",
+        "a",
+        "c",
+        "c",
+        "c",
+        "a",
+        "a",
+        "c"
+      ],
+      "result": [
+        "c",
+        "c",
+        "b",
+        "c",
+        "c",
+        "c",
+        "b",
+        "b",
+        "c"
+      ],
+      "score": 3
+    }
+  ]
+}

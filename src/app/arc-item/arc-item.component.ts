@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { SubtestModel } from '../subtestModel';
-import { ColorEnum } from '../click-color.directive';
+
 
 
 @Component({
@@ -21,6 +20,7 @@ export class ArcItemComponent implements OnInit{
 
   updateValue(color: string, index: number) {
     this.subtest[index] = color;
+    console.log('TEST LINE', this.subtest);
     this.emitResults.emit(this.subtest)
   }
 }

@@ -9,11 +9,24 @@ import { SharedService } from '../shared.service';
   styleUrls: ['./result.component.scss']
 })
 export class ResultComponent {
-  @Input() subtest: SubtestModel;
-  @Output() resultChange = new EventEmitter<string[]>();
+  _subtest: SubtestModel;
+  get subtest(): SubtestModel {
+    return this._subtest;
+  }
+  @Input() set subtest(value: SubtestModel) {
+    if(!this.isCheatSheet) {
+      this.result = new Array(9).fill('a');
+    } else {
+      this.result = value?.result
+    }
+    this.result = value?.result
+    this._subtest = value;
+  }
 
-  result = new Array(9).fill('a');
-  constructor() { }
+  // @Input() subtest: SubtestModel;
+  @Input() isCheatSheet = true;
+  @Output() resultChange = new EventEmitter<string[]>();
+  result;
 
   updateResults(result: string[]) {
     this.result = result;
