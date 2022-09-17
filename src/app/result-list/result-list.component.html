@@ -1,4 +1,4 @@
 <div class="card-container">
-  <app-result *ngFor="let subtest of subtests; let i = index" [subtest]="subtest" (resultChange)="updateSubtestResults($event, i)"></app-result>
+  <app-result *ngFor="let subtest of subtests; let i = index" [subtest]="subtest" (resultChange)="updateSubtestResults($event, subtest.id)"></app-result>
 </div>
 

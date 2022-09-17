@@ -1,6 +1,6 @@
 
 <div class="arc_wrapper">
   <!--TODO only results are updatable-->
-  <div appClickColor *ngFor="let box of values; let i = index" [color]="box" [isResult]="true" (updateValue)="updateValue($event, i)">
+  <div appClickColor *ngFor="let box of values; let i = index" [colorCode]="box" [isResult]="true" (updateValue)="updateValue($event, i)">
   </div>
 </div>

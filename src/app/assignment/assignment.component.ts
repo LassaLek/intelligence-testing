@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { SubtestModel } from '../subtestModel';
 import { SubtestTypeEnum } from '../subtest.type.enum';
@@ -26,6 +26,7 @@ interface AssignmentModel {
 })
 export class AssignmentComponent {
   @Input() assignment: SubtestModel;
+  @Output() assignmentOpened = new EventEmitter<number>();
   example: AssignmentModel = {
     assignment: [],
     result: []
@@ -34,6 +35,7 @@ export class AssignmentComponent {
 
   changeState(): void {
     (this.state == "closed") ? this.state = "open" : console.log("close attempt");
+    this.assignmentOpened.emit(this.assignment.id)
   }
 
   ngOnInit() {
@@ -41,10 +43,25 @@ export class AssignmentComponent {
   }
 
   private getTestExampleSample(testType: string): AssignmentModel {
-    // TODO testType if
+    if(testType === SubtestTypeEnum.ColorSwitch) {
+      // a -> b
+      // b -> a
+      return {
+        assignment: ["a", "a", "a", "a", "b", "a", "a", "a", "a"],
+        result: ["b", "b", "b", "b", "a", "b", "b", "b", "b"],
+      }
+    } else if(testType === SubtestTypeEnum.ColorSwitchAdvanced) {
+      // a -> b
+      // b -> c
+      return {
+        assignment: ["a", "a", "a", "a", "c", "a", "a", "a", "b"],
+        result: ["b", "b", "b", "b", "a", "b", "b", "b", "c"],
+      }
+    }
+
     return {
-      assignment: ["#688290", "#688290", "#688290", "#688290", "#efe7d6", "#688290", "#688290", "#688290", "#688290", "#688290"],
-      result: ["#efe7d6", "#efe7d6", "#efe7d6", "#efe7d6", "#688290", "#efe7d6", "#efe7d6", "#efe7d6", "#efe7d6", "#efe7d6"],
+      assignment: ["a", "b", "c", "a", "b", "c", null, null, null],
+      result: ["a", "b", "c", "a", "b", "c", "a", "b", "c"],
     }
   }
 
