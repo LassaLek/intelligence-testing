@@ -9,6 +9,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ArcItemComponent implements OnInit{
   @Input() subtest: string[] = [];
+  // Here you can change click-ability of the arc
+  @Input() isResult = false;
   @Output() emitResults = new EventEmitter();
 
   values: any = new Array(9).fill('a');

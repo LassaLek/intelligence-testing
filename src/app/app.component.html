@@ -171,15 +171,13 @@
     alt="VSE Logo"
     src="assets/logo.png"
   />
-  <!--TODO - just for me -remove after testing-->
-  <span>Kompozitní testování {{currentTest?.test_id}}</span>
+  <span>Kompozitní testování <!--{{currentTest?.test_id}}--></span>
   <div class="spacer"></div>
   <button mat-button (click)="endTheSet()"> Zrušit </button>
 </div>
 
 <div role="main">
   <div *ngIf="currentTest ;else init_test">
-    <!--TODO show when test started - run counter-->
     <div id="wrapper">
       <!-- Assignments -->
       <div id="assignments">
