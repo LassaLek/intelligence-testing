@@ -1,6 +1,6 @@
 <div class="card card-small" (click)="changeState()" [@widthGrow]="state">
     <div *ngIf="state === 'closed'; else arc">
-      <button mat-button color="primary">Open TEST - {{assignment.id}}</button>
+      <button mat-raised-button color="primary" style="margin-top: 10px;">Open TEST - {{assignment.id}}</button>
     </div>
 
     <ng-template #arc>
@@ -20,7 +20,8 @@
           <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2"/>
           <path d="M0 0h24v24H0z" fill="none"/>
         </svg>
-        ?
+        <mat-icon>help_outline</mat-icon>
+        <mat-icon>touch_app</mat-icon>
       </div>
 
     </ng-template>
