@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import test1 from '../assets/tests/test_1.json';
 import { TestModel } from './test.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SharedService } from './shared.service';
 
 const Config = {
-  timeForTestSet: 1 * 60 //five minutes is 300 seconds! - TODO proper is 5 minutes
+  timeForTestSet: 5 * 60 //five minutes is 300 seconds!
 }
 
 @Component({
@@ -15,11 +17,15 @@ export class AppComponent {
   private timerInterval;
   title = 'intelligence-testing';
   currentTest: TestModel = null;
+  currentTestCounter = 0;
   score = 0;
   timer = '5:00';
   timerProgress = 100;
 
   private currentResults: boolean[] = [];
+
+  constructor(private snackBar: MatSnackBar) {
+  }
 
   updateTestResults(results: boolean[]) {
     this.currentResults = results;
@@ -31,7 +37,7 @@ export class AppComponent {
   startTheTest() {
 
     // TODO Pick a random test from the list of tests
-    this.currentTest = test1[0]; //tests[SharedService.getRandomInt(tests.length)];
+    this.currentTest = test1[SharedService.getRandomInt(test1.length)];
 
     // TODO Initiate the test - results, score, ...
 
@@ -50,11 +56,19 @@ export class AppComponent {
     // TODO - some score ALERT - modal - TOAST
 
     let testResult = this.countTheTestScore(this.currentResults, this.currentTest);
-    alert('Test score: ' + testResult);
+    let snackBarRef = this.snackBar.open('Test score:' + testResult, null, {
+      duration: 2000,
+      verticalPosition: 'top',
+    });
     console.log('AppComponent testResult:', testResult);
 
     // TODO switch test
-    this.currentTest = test1[1];
+    this.currentTestCounter++;
+    this.currentTest = test1[SharedService.getRandomInt(test1.length)];
+    // TODO end the test after XXX
+    if(this.currentTestCounter > 3) {
+      this.endTheSet();
+    }
   }
 
   /**
