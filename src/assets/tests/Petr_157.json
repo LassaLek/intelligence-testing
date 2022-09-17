@@ -1,0 +1,2933 @@
+{
+  "2": {
+    "score": 16,
+    "answers": [
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ]
+    ],
+    "results": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    "test": {
+      "test_id": 2,
+      "total": 45,
+      "test_type": "pattern",
+      "assignments": [
+        {
+          "id": 1,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "b",
+            "a",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "a",
+            "b"
+          ],
+          "result": [
+            "c",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 5
+        },
+        {
+          "id": 2,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "a"
+          ],
+          "result": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 3,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 4,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "c",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 5,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 6,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "c",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 7,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 8,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "a"
+          ],
+          "result": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 9,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "b",
+            "a",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "a",
+            "b"
+          ],
+          "result": [
+            "c",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 5,
+          "opened": true
+        }
+      ]
+    }
+  },
+  "3": {
+    "score": 11,
+    "answers": [
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ]
+    ],
+    "results": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "test": {
+      "test_id": 3,
+      "total": 29,
+      "test_type": "pattern",
+      "assignments": [
+        {
+          "id": 1,
+          "type": "CTest2",
+          "boxes": [
+            "a",
+            "b",
+            "b",
+            "b",
+            "a",
+            "b",
+            "b",
+            null,
+            null
+          ],
+          "result": [
+            "a",
+            "b",
+            "b",
+            "b",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a"
+          ],
+          "score": 5,
+          "opened": true
+        },
+        {
+          "id": 2,
+          "type": "ColorSwitch",
+          "boxes": [
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "a",
+            "b"
+          ],
+          "result": [
+            "b",
+            "a",
+            "b",
+            "b",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a"
+          ],
+          "score": 3
+        },
+        {
+          "id": 3,
+          "type": "ColorSwitch",
+          "boxes": [
+            "a",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a",
+            "a",
+            "a",
+            "b"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "b",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a"
+          ],
+          "score": 3
+        },
+        {
+          "id": 4,
+          "type": "CTest2",
+          "boxes": [
+            "b",
+            "b",
+            null,
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a"
+          ],
+          "score": 3
+        },
+        {
+          "id": 5,
+          "type": "CTest",
+          "boxes": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "a",
+            "b",
+            "b",
+            null,
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a"
+          ],
+          "score": 3
+        },
+        {
+          "id": 6,
+          "type": "ColorSwitch",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "b",
+            "b",
+            "a",
+            "a",
+            "b"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "a"
+          ],
+          "score": 3
+        },
+        {
+          "id": 7,
+          "type": "ColorSwitch",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a",
+            "b"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a"
+          ],
+          "score": 3
+        },
+        {
+          "id": 8,
+          "type": "Move",
+          "boxes": [
+            "b",
+            "a",
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "a",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "score": 3
+        },
+        {
+          "id": 9,
+          "type": "ColorSwitch",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "a",
+            "b"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a"
+          ],
+          "score": 3
+        }
+      ]
+    }
+  },
+  "4": {
+    "score": 31,
+    "answers": [
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ]
+    ],
+    "results": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false
+    ],
+    "test": {
+      "test_id": 4,
+      "total": 45,
+      "test_type": "pattern",
+      "assignments": [
+        {
+          "id": 1,
+          "type": "PositionSwitch",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4
+        },
+        {
+          "id": 2,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "c",
+            "a",
+            "a",
+            "c"
+          ],
+          "result": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 7
+        },
+        {
+          "id": 3,
+          "type": "PositionSwitch",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4
+        },
+        {
+          "id": 4,
+          "type": "CTest",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "result": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a"
+          ],
+          "score": 6
+        },
+        {
+          "id": 5,
+          "type": "CTest",
+          "boxes": [
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            null,
+            null,
+            null,
+            null
+          ],
+          "result": [
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c"
+          ],
+          "score": 4,
+          "opened": true
+        },
+        {
+          "id": 6,
+          "type": "CTest",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "a",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "result": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a"
+          ],
+          "score": 5
+        },
+        {
+          "id": 7,
+          "type": "PositionSwitch",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4
+        },
+        {
+          "id": 8,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "c",
+            "a",
+            "a",
+            "c"
+          ],
+          "result": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 7
+        },
+        {
+          "id": 9,
+          "type": "PositionSwitch",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4
+        }
+      ]
+    }
+  },
+  "5": {
+    "score": 31,
+    "answers": [
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ]
+    ],
+    "results": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "test": {
+      "test_id": 5,
+      "total": 45,
+      "test_type": "pattern",
+      "assignments": [
+        {
+          "id": 1,
+          "type": "CTest2",
+          "boxes": [
+            "c",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            null,
+            null
+          ],
+          "result": [
+            "c",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 5
+        },
+        {
+          "id": 2,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "a"
+          ],
+          "result": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b"
+          ],
+          "score": 5,
+          "opened": true
+        },
+        {
+          "id": 3,
+          "type": "CTest",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            null
+          ],
+          "result": [
+            "b",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 4,
+          "type": "CTest2",
+          "boxes": [
+            "b",
+            null,
+            "b",
+            "c",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "c",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 5,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 6,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "c",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 7,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 8,
+          "type": "CTest2",
+          "boxes": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b",
+            null,
+            null,
+            null
+          ],
+          "result": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 9,
+          "type": "CTest",
+          "boxes": [
+            "c",
+            "b",
+            null,
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "c"
+          ],
+          "result": [
+            "c",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 5
+        }
+      ]
+    }
+  },
+  "6": {
+    "score": 42,
+    "answers": [
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ]
+    ],
+    "results": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false
+    ],
+    "test": {
+      "test_id": 6,
+      "total": 45,
+      "test_type": "pattern",
+      "assignments": [
+        {
+          "id": 1,
+          "type": "PositionSwitch",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4,
+          "opened": true
+        },
+        {
+          "id": 2,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "c",
+            "a",
+            "a",
+            "c"
+          ],
+          "result": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 7,
+          "opened": true
+        },
+        {
+          "id": 3,
+          "type": "PositionSwitch",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4,
+          "opened": true
+        },
+        {
+          "id": 4,
+          "type": "CTest",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "result": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a"
+          ],
+          "score": 6,
+          "opened": true
+        },
+        {
+          "id": 5,
+          "type": "CTest",
+          "boxes": [
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            null,
+            null,
+            null,
+            null
+          ],
+          "result": [
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c"
+          ],
+          "score": 4,
+          "opened": true
+        },
+        {
+          "id": 6,
+          "type": "CTest",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "a",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "result": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a"
+          ],
+          "score": 5
+        },
+        {
+          "id": 7,
+          "type": "PositionSwitch",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4
+        },
+        {
+          "id": 8,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "c",
+            "a",
+            "a",
+            "c"
+          ],
+          "result": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 7
+        },
+        {
+          "id": 9,
+          "type": "PositionSwitch",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4
+        }
+      ]
+    }
+  },
+  "7": {
+    "score": 47,
+    "answers": [
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ]
+    ],
+    "results": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "test": {
+      "test_id": 7,
+      "total": 52,
+      "test_type": "pattern",
+      "assignments": [
+        {
+          "id": 1,
+          "type": "CTest",
+          "boxes": [
+            "c",
+            "a",
+            "c",
+            "c",
+            "b",
+            "c",
+            "c",
+            null,
+            null
+          ],
+          "result": [
+            "a",
+            "c",
+            "c",
+            "c",
+            "b",
+            "c",
+            "c",
+            "c",
+            "a"
+          ],
+          "score": 4
+        },
+        {
+          "id": 2,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "c",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "c",
+            "a"
+          ],
+          "result": [
+            "c",
+            "a",
+            "c",
+            "c",
+            "b",
+            "c",
+            "c",
+            "a",
+            "c"
+          ],
+          "score": 7
+        },
+        {
+          "id": 3,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "b",
+            "a",
+            "b",
+            "c",
+            "b",
+            "b"
+          ],
+          "result": [
+            "c",
+            "c",
+            "a",
+            "c",
+            "b",
+            "c",
+            "a",
+            "c",
+            "c"
+          ],
+          "score": 7
+        },
+        {
+          "id": 4,
+          "type": "CTest",
+          "boxes": [
+            "c",
+            null,
+            null,
+            "a",
+            "b",
+            "a",
+            "c",
+            "c",
+            "c"
+          ],
+          "result": [
+            "c",
+            "c",
+            "c",
+            "a",
+            "b",
+            "a",
+            "c",
+            "c",
+            "c"
+          ],
+          "score": 6
+        },
+        {
+          "id": 5,
+          "type": "CTest2",
+          "boxes": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "a",
+            "b",
+            null,
+            null,
+            null
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "a",
+            "b",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 4
+        },
+        {
+          "id": 6,
+          "type": "CTest",
+          "boxes": [
+            "c",
+            null,
+            null,
+            "a",
+            "b",
+            "a",
+            "c",
+            "c",
+            "c"
+          ],
+          "result": [
+            "c",
+            "c",
+            "c",
+            "a",
+            "b",
+            "a",
+            "c",
+            "c",
+            "c"
+          ],
+          "score": 6
+        },
+        {
+          "id": 7,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "b",
+            "a",
+            "b",
+            "c",
+            "b",
+            "b"
+          ],
+          "result": [
+            "c",
+            "c",
+            "a",
+            "c",
+            "b",
+            "c",
+            "a",
+            "c",
+            "c"
+          ],
+          "score": 7
+        },
+        {
+          "id": 8,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "c",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "c",
+            "a"
+          ],
+          "result": [
+            "c",
+            "a",
+            "c",
+            "c",
+            "b",
+            "c",
+            "c",
+            "a",
+            "c"
+          ],
+          "score": 7
+        },
+        {
+          "id": 9,
+          "type": "CTest",
+          "boxes": [
+            "c",
+            "a",
+            "c",
+            "c",
+            "b",
+            "c",
+            "c",
+            null,
+            null
+          ],
+          "result": [
+            "a",
+            "c",
+            "c",
+            "c",
+            "b",
+            "c",
+            "c",
+            "c",
+            "a"
+          ],
+          "score": 4
+        }
+      ]
+    }
+  },
+  "8": {
+    "score": 47,
+    "answers": [
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ]
+    ],
+    "results": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "test": {
+      "test_id": 8,
+      "total": 45,
+      "test_type": "pattern",
+      "assignments": [
+        {
+          "id": 1,
+          "type": "CTest2",
+          "boxes": [
+            "c",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            null,
+            null
+          ],
+          "result": [
+            "c",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 5
+        },
+        {
+          "id": 2,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "a"
+          ],
+          "result": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 3,
+          "type": "CTest",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            null
+          ],
+          "result": [
+            "b",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 4,
+          "type": "CTest2",
+          "boxes": [
+            "b",
+            null,
+            "b",
+            "c",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "c",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 5,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "b",
+            "a",
+            "a",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 5,
+          "opened": true
+        },
+        {
+          "id": 6,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "c",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 7,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "a",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "c",
+            "b",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 8,
+          "type": "CTest2",
+          "boxes": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b",
+            null,
+            null,
+            null
+          ],
+          "result": [
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "b"
+          ],
+          "score": 5
+        },
+        {
+          "id": 9,
+          "type": "CTest",
+          "boxes": [
+            "c",
+            "b",
+            null,
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "c"
+          ],
+          "result": [
+            "c",
+            "b",
+            "b",
+            "b",
+            "c",
+            "b",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 5
+        }
+      ]
+    }
+  },
+  "9": {
+    "score": 6,
+    "answers": [
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ]
+    ],
+    "results": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+    ],
+    "test": {
+      "test_id": 9,
+      "total": 28,
+      "test_type": "generated",
+      "assignments": [
+        {
+          "id": 1,
+          "type": "ColorSwitchAndMove",
+          "boxes": [
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c"
+          ],
+          "result": [
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c"
+          ],
+          "score": 0,
+          "opened": true
+        },
+        {
+          "id": 2,
+          "type": "PositionSwitch",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4
+        },
+        {
+          "id": 3,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "b",
+            "b"
+          ],
+          "score": 3
+        },
+        {
+          "id": 4,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "c",
+            "c",
+            "b",
+            "a",
+            "c",
+            "a",
+            "a",
+            "c",
+            "c"
+          ],
+          "result": [
+            "c",
+            "c",
+            "c",
+            "b",
+            "c",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4
+        },
+        {
+          "id": 5,
+          "type": "CTest",
+          "boxes": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            null,
+            null
+          ],
+          "result": [
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b",
+            "b"
+          ],
+          "score": 2
+        },
+        {
+          "id": 6,
+          "type": "ColorSwitchAndMove",
+          "boxes": [
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "a",
+            "c",
+            "c",
+            "c"
+          ],
+          "result": [
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "b"
+          ],
+          "score": 2
+        },
+        {
+          "id": 7,
+          "type": "CTest",
+          "boxes": [
+            "a",
+            "a",
+            "a",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "result": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a",
+            "a"
+          ],
+          "score": 6
+        },
+        {
+          "id": 8,
+          "type": "PositionSwitch",
+          "boxes": [
+            "b",
+            "b",
+            "c",
+            "c",
+            "b",
+            "b",
+            "b",
+            "a",
+            "a"
+          ],
+          "result": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c"
+          ],
+          "score": 4
+        },
+        {
+          "id": 9,
+          "type": "ColorSwitchAdvanced",
+          "boxes": [
+            "c",
+            "c",
+            "a",
+            "c",
+            "c",
+            "c",
+            "a",
+            "a",
+            "c"
+          ],
+          "result": [
+            "c",
+            "c",
+            "b",
+            "c",
+            "c",
+            "c",
+            "b",
+            "b",
+            "c"
+          ],
+          "score": 3
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "test_id": 22,
+  "test_type": "generated",
+  "assignments": [
+    {
+      "id": 1,
+      "type": "Move",
+      "boxes": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "a",
+        "a",
+        "a",
+        "c",
+        "c"
+      ],
+      "result": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "a",
+        "a"
+      ],
+      "score": 5
+    },
+    {
+      "id": 2,
+      "type": "CTest",
+      "boxes": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        null,
+        null,
+        null
+      ],
+      "result": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c"
+      ],
+      "score": 3
+    },
+    {
+      "id": 3,
+      "type": "PositionSwitch",
+      "boxes": [
+        "b",
+        "b",
+        "c",
+        "c",
+        "b",
+        "b",
+        "b",
+        "a",
+        "a"
+      ],
+      "result": [
+        "b",
+        "b",
+        "a",
+        "a",
+        "b",
+        "b",
+        "b",
+        "c",
+        "c"
+      ],
+      "score": 4
+    },
+    {
+      "id": 4,
+      "type": "ColorSwitchAndMove",
+      "boxes": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "a",
+        "c",
+        "c",
+        "c"
+      ],
+      "result": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "b"
+      ],
+      "score": 2
+    },
+    {
+      "id": 5,
+      "type": "PositionSwitch",
+      "boxes": [
+        "b",
+        "b",
+        "c",
+        "c",
+        "b",
+        "b",
+        "b",
+        "a",
+        "a"
+      ],
+      "result": [
+        "b",
+        "b",
+        "a",
+        "a",
+        "b",
+        "b",
+        "b",
+        "c",
+        "c"
+      ],
+      "score": 4
+    },
+    {
+      "id": 6,
+      "type": "ColorSwitchAdvanced",
+      "boxes": [
+        "a",
+        "c",
+        "c",
+        "a",
+        "b",
+        "b",
+        "c",
+        "a",
+        "a"
+      ],
+      "result": [
+        "b",
+        "c",
+        "c",
+        "b",
+        "c",
+        "c",
+        "c",
+        "b",
+        "b"
+      ],
+      "score": 6
+    },
+    {
+      "id": 7,
+      "type": "Move",
+      "boxes": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c"
+      ],
+      "result": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c"
+      ],
+      "score": 0
+    },
+    {
+      "id": 8,
+      "type": "ColorSwitchAdvanced",
+      "boxes": [
+        "c",
+        "c",
+        "a",
+        "c",
+        "c",
+        "a",
+        "a",
+        "c",
+        "b"
+      ],
+      "result": [
+        "c",
+        "c",
+        "b",
+        "c",
+        "c",
+        "b",
+        "b",
+        "c",
+        "c"
+      ],
+      "score": 4
+    },
+    {
+      "id": 9,
+      "type": "Move",
+      "boxes": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "a",
+        "c",
+        "c",
+        "c"
+      ],
+      "result": [
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "c",
+        "a"
+      ],
+      "score": 2
+    }
+  ]
+}

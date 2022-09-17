@@ -31,8 +31,7 @@ export class AssignmentComponent {
     assignment: [],
     result: []
   };
-  // TODO init all buttons opened
-  state = "open"// "closed";
+  state = "closed";
 
   changeState(): void {
     (this.state == "closed") ? this.state = "open" : console.log("close attempt");

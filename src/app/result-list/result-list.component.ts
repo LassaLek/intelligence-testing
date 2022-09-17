@@ -12,9 +12,6 @@ export class ResultListComponent {
   subtestResults = new Array(9).fill([]);
 
   @Output() testResults = new EventEmitter();
-  constructor() {
-    console.log('ResultListComponent subtests', this.subtests);
-  }
 
   updateSubtestResults(result: string[], id: number) {
     this.subtestResults[id - 1] = result;

@@ -8,6 +8,7 @@ import test6 from '../assets/tests/test_6.json';
 import test7 from '../assets/tests/test_7.json';
 import test8 from '../assets/tests/test_8.json';
 import test9 from '../assets/tests/test_9.json';
+import example from '../assets/tests/example.json';
 
 import { TestModel } from './test.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -16,6 +17,7 @@ import { SubtestModel } from './subtestModel';
 const tests = [test1, test2, test3, test4, test5, test6, test7, test8, test9 ].sort(function (a, b) {
   return a.total - b.total;
 });
+
 
 const Config = {
   timeForTestSet: 5 * 60, //five minutes is 300 seconds!
@@ -44,8 +46,8 @@ export class AppComponent {
 
   constructor(private snackBar: MatSnackBar, private sharedService: SharedService) {
     // TODO - Generate some RANDOM test
-    let gen = this.sharedService.generateTest(22);
-    console.log(gen);
+    // let gen = this.sharedService.generateTest(22);
+    // console.log(gen);
 
     this.startTheTest();
   }
