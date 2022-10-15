@@ -48,6 +48,8 @@ export class AppComponent {
     // Can generate some RANDOM test
     // let gen = this.sharedService.generateTest(22);
     // console.log(gen);
+
+    // this.startTheTest();
   }
 
   updateTestResults(results: string[][]) {
