@@ -1,6 +1,6 @@
 {
   "test_id": 9,
-  "total": 28,
+  "total": 31,
   "test_type": "generated",
   "assignments": [
     {
@@ -28,7 +28,7 @@
         "c",
         "c"
       ],
-      "score": 0
+      "score": 3
     },
     {
       "id": 2,
