@@ -20,7 +20,7 @@ const tests = [test1, test2, test3, test4, test5, test6, test7, test8, test9 ].s
 
 
 const Config = {
-  timeForTestSet: 5 * 60, //five minutes is 300 seconds!
+  timeForTestSet: 60 * 60, //five minutes is 300 seconds!
   testSetSize: tests.length
 }
 
@@ -35,7 +35,7 @@ export class AppComponent {
   currentTestCounter = 0;
   score = 0;
   maximalScore = 0;
-  timer = '5:00';
+  timer = '30:00';
   timerProgress = 100;
   resultData = new Map<number, any>();
   name;
